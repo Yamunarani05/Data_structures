@@ -41,15 +41,15 @@ int findDepth(TreeNode* root, int value, int currentDepth) {
     }
 
     if (root->value == value) {
-        return currentDepth; // Node found, return current depth
+        return currentDepth; 
     }
 
     int leftDepth = findDepth(root->left, value, currentDepth + 1);
     if (leftDepth != -1) {
-        return leftDepth; // Node found in the left subtree
-    }
+        return leftDepth;
+}
 
-    return findDepth(root->right, value, currentDepth + 1); // Search in the right subtree
+    return findDepth(root->right, value, currentDepth + 1);
 }
 
 int main() {
